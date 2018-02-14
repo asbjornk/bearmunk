@@ -2,6 +2,15 @@
 <head>
 <title>Bearmunk</title>
 <style type="text/css">
+    @keyframes collageintro {
+        0%  {margin: -1000px -1000px; }
+        100%  {margin: 60px 60px; }
+    }
+    @keyframes collagerotate {
+        0%  {transform: rotate(1deg); }
+        50% {transform: rotate(20deg); }
+        100%  {transform: rotate(1deg); }
+    }
     body {
         background-color: #EFB5ED;
         background-image: url('background.png');
@@ -10,9 +19,14 @@
         background-position: top center;
     }
     .collage {
+        margin: 60px 60px;
         width: 700px;
         height: 700px;
-        transform: rotate(17deg);
+        transform: rotate(1deg);
+        animation-name: collageintro, collagerotate;
+        animation-duration: 3s, 10s;
+        animation-iteration-count: 1, infinite;
+        animation-delay: 0s, 3s;
     }
 </style>
 </head>
